@@ -1,6 +1,4 @@
-# app/feddit_client.py
 import requests
-
 
 def get_comments(subfeddit, limit=25, start_time=None, end_time=None):
     base_url = f"http://localhost:5000/api/comments/{subfeddit}"

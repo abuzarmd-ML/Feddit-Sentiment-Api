@@ -1,6 +1,7 @@
-# app/routes.py
 from fastapi import APIRouter
+
 from app.feddit_client import get_comments
+
 from app.sentiment import analyze_sentiment
 
 router = APIRouter()
@@ -28,4 +29,3 @@ def analyze_subfeddit(
         analyzed.sort(key=lambda x: x["polarity_score"], reverse=True)
 
     return analyzed
-
